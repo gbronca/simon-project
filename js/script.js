@@ -78,7 +78,14 @@ function start() {
 	timerVariable = setInterval(play, 800);
 }
 
-// Event listener functions
+// listen to control buttons (strict, start, power) change of status
+strictButton.addEventListener('click', () => {
+	if (strictButton.checked) {
+		strictMode = true;
+	} else {
+		strictMode = false;
+	}
+});
 
 startButton.addEventListener('click', () => {
 	if (power) {
@@ -98,7 +105,12 @@ powerButton.addEventListener('click', () => {
 		clearInterval(timerVariable);
 	}
 });
-  
+
+function winGame() {
+	counter.innerHTML = 'WIN!';
+	power = false;
+}
+
 function check() {
 	if (playerSequence[playerSequence.length - 1] !== computerSequence[playerSequence.length - 1]) {
 		counter.innerHTML = 'XX';
@@ -115,8 +127,28 @@ function check() {
 	} else if (playerSequence.length === computerSequence.length) {
 		winGame();
 	} else if (round === playerSequence.length) {
+		timerVariable = setInterval(play, 800);
 		round += 1;
 		resetVariables();
-		timerVariable = setInterval(play, 800);
 	}
 }
+
+function played(color) {
+	if (power) {
+	// finds the colour clicked by the player and adds
+	// to the playerSequence array the color position in the colors array.
+		const playedColor = color.srcElement.attributes.id.value;
+		playerSequence.push(colors.indexOf(playedColor));
+  
+		check();
+		playAudio(playedColor);
+		if (playerSequence[playerSequence.length - 1] !== computerSequence[playerSequence.length - 1]) {
+			setTimeout(() => {
+			}, 600);
+		}
+	}
+}
+
+// adds event listener to game colours
+const colorEvents = Array.from(queryColors.querySelectorAll('.colors-size'));
+colorEvents.forEach(color => color.addEventListener('click', played));
