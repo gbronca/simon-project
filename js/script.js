@@ -78,6 +78,8 @@ function start() {
 	timerVariable = setInterval(play, 800);
 }
 
+// Event listener functions
+
 startButton.addEventListener('click', () => {
 	if (power) {
 		startButton.innerHTML = 'Reset';
@@ -96,3 +98,25 @@ powerButton.addEventListener('click', () => {
 		clearInterval(timerVariable);
 	}
 });
+  
+function check() {
+	if (playerSequence[playerSequence.length - 1] !== computerSequence[playerSequence.length - 1]) {
+		counter.innerHTML = 'XX';
+		setTimeout(() => {
+			counter.innerHTML = round;
+			if (strictMode) {
+				start();
+			} else {
+				player = true;
+				resetVariables();
+				timerVariable = setInterval(play, 800);
+			}
+		}, 800);
+	} else if (playerSequence.length === computerSequence.length) {
+		winGame();
+	} else if (round === playerSequence.length) {
+		round += 1;
+		resetVariables();
+		timerVariable = setInterval(play, 800);
+	}
+}
