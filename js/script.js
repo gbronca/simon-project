@@ -140,8 +140,8 @@ function played(color) {
 		const playedColor = color.srcElement.attributes.id.value;
 		playerSequence.push(colors.indexOf(playedColor));
   
-		check();
 		playAudio(playedColor);
+		check();
 		if (playerSequence[playerSequence.length - 1] !== computerSequence[playerSequence.length - 1]) {
 			setTimeout(() => {
 			}, 600);

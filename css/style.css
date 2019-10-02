@@ -7,6 +7,7 @@
 }
 
 body {
+    font-family: 'Righteous';
   background-color: antiquewhite;
   height: 100%;
   width: 100%;
@@ -34,7 +35,24 @@ input[type=checkbox] {
     flex-direction: column;
 }
 
+.game-title {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: -20px;
+}
+.title {
+    font-size: 3rem;
+}
 
+#start {
+    padding: 5px 25px;
+    border-radius: 10%;
+    font-family: 'Righteous';
+    font-size: 1rem;
+    background-color: #016401;
+    color: #fff;
+}
 
 /* Game Board */
 #board-game {
@@ -57,8 +75,8 @@ input[type=checkbox] {
 }
 
 #simon-game {
-    height: 65vh;
-    width: 65vh;
+    height: 70vh;
+    width: 70vh;
 }
 
 #colors {
@@ -84,22 +102,22 @@ input[type=checkbox] {
 
 #green {
     border-radius: 100% 0 0 0;
-    background-color: rgb(1, 100, 1);
+    background-color: #016401;
 }
 
 #red {
     border-radius: 0 100% 0 0;
-    background-color: rgb(148, 2, 2);
+    background-color: #940202;
 }
 
 #yellow {
     border-radius: 0 0 0 100%;
-    background-color: rgb(212, 158, 19);
+    background-color: #d49e13;
 }
 
 #blue {
     border-radius: 0 0 100% 0;
-    background-color: rgb(1, 1, 145);
+    background-color: #010191;
 }
 
 .playing {
@@ -123,7 +141,7 @@ input[type=checkbox] {
     width: 50%;
     border-radius: 50%;
     background-color: #f5f5dc;
-    border: 1.5vmin solid #333;
+    border: 1.1vmin solid #111;
 }
 
 .counter {
@@ -156,4 +174,10 @@ input[type=checkbox] {
         height: 90vw;
         width: 90vw;
     }
+
+    .game-title {
+        padding-top: 5px;
+        margin-bottom: -60px;
+    }
+
 }
