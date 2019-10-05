@@ -127,9 +127,12 @@ function check() {
 	} else if (playerSequence.length === computerSequence.length) {
 		winGame();
 	} else if (round === playerSequence.length) {
-		timerVariable = setInterval(play, 800);
-		round += 1;
-		resetVariables();
+		setTimeout(() => {
+			timerVariable = setInterval(play, 800);
+			round += 1;
+			resetVariables();
+		}, 600);
+
 	}
 }
 
@@ -144,11 +147,11 @@ function played(color) {
 		check();
 		if (playerSequence[playerSequence.length - 1] !== computerSequence[playerSequence.length - 1]) {
 			setTimeout(() => {
-			}, 600);
+			}, 800);
 		}
 	}
 }
 
-// adds event listener to game colours
+// event listener for game colours
 const colorEvents = Array.from(queryColors.querySelectorAll('.colors-size'));
 colorEvents.forEach(color => color.addEventListener('click', played));
