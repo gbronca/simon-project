@@ -1,3 +1,6 @@
+/* by Andreas Storm
+from https://codepen.io/andreasstorm/pen/rKboqY */
+
 .toggle {
     position: relative;
     display: block;
@@ -63,7 +66,7 @@
     stroke-dasharray: 25;
     stroke-dashoffset: 25;
   }
-  
+
   #strict:checked + .toggle span path {
     stroke: #52d66b;
     stroke-dasharray: 25;
