@@ -8,6 +8,8 @@ let count;
 let timerVariable;
 let player = true; // True: Computer, False: Human
 
+
+
 const counter = document.querySelector('.game-counter');
 const strictButton = document.querySelector('#strict');
 const powerButton = document.querySelector('#power');
@@ -106,14 +108,22 @@ powerButton.addEventListener('click', () => {
 	}
 });
 
+// Executed if the player completes the game
 function winGame() {
 	counter.innerHTML = 'WIN!';
-	power = false;
+	setTimeout(() => {
+		power = true;
+		counter.innerHTML = '-';
+		startButton.innerHTML = 'Start';
+	}, 1600);
 }
 
+// Checks if the player executed the correct sequence and what happens after
 function check() {
 	if (playerSequence[playerSequence.length - 1] !== computerSequence[playerSequence.length - 1]) {
 		counter.innerHTML = 'XX';
+		power = false;
+		clearInterval(timerVariable);
 		setTimeout(() => {
 			counter.innerHTML = round;
 			if (strictMode) {
@@ -132,9 +142,9 @@ function check() {
 			round += 1;
 			resetVariables();
 		}, 600);
-
 	}
 }
+
 
 function played(color) {
 	if (power) {

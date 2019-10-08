@@ -10,6 +10,7 @@ from https://codepen.io/andreasstorm/pen/rKboqY */
     -webkit-tap-highlight-color: transparent;
     transform: translate3d(0, 0, 0);
   }
+
   .toggle:before {
     content: "";
     position: relative;
@@ -22,6 +23,7 @@ from https://codepen.io/andreasstorm/pen/rKboqY */
     border-radius: 12px;
     transition: background 0.2s ease;
   }
+
   .toggle span {
     position: absolute;
     top: 0;
@@ -34,10 +36,12 @@ from https://codepen.io/andreasstorm/pen/rKboqY */
     box-shadow: 0 2px 6px rgba(154,153,153,0.75);
     transition: all 0.2s ease;
   }
+
   .toggle span svg {
     margin: 7px;
     fill: none;
   }
+
   .toggle span svg path {
     stroke: #c8ccd4;
     stroke-width: 2;
@@ -47,6 +51,7 @@ from https://codepen.io/andreasstorm/pen/rKboqY */
     stroke-dashoffset: 0;
     transition: all 0.5s linear;
   }
+
   #power:checked + .toggle:before {
     background: #52d66b;
   }
@@ -54,6 +59,7 @@ from https://codepen.io/andreasstorm/pen/rKboqY */
   #strict:checked + .toggle:before {
     background: #52d66b;
   }
+
   #power:checked + .toggle span {
     transform: translateX(18px);
   }
@@ -61,6 +67,7 @@ from https://codepen.io/andreasstorm/pen/rKboqY */
   #strict:checked + .toggle span {
     transform: translateX(18px);
   }
+
   #power:checked + .toggle span path {
     stroke: #52d66b;
     stroke-dasharray: 25;
@@ -72,5 +79,3 @@ from https://codepen.io/andreasstorm/pen/rKboqY */
     stroke-dasharray: 25;
     stroke-dashoffset: 25;
   }
-
-  

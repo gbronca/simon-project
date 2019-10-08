@@ -2,9 +2,11 @@
 
 This is the second of five milestone projects for the Code Institute Bootcamp.
 
-The game was build in HTML5/CSS3, with the logic of the game built in ES6.
+The game was build in HTML5/CSS3, with the logic of the game build in ES6.
 
-The main focus of the projet is the Javascript logic, although I was midful of building a responsive design.
+The main focus of the project is the Javascript logic, although I was mindful of building a responsive design.
+
+The game can be played on [Simon Game Project](https://gbronca.github.io/simon-project/)
 
 ## What is Simon game
 
@@ -16,7 +18,7 @@ For more information about the game, please visit the official game's [Wikipedia
 
 1. Power switch
 
-    Power up the game. The game is only playable if the power is on. This is to mimic the battery powered game from the 70's and 80's. If power is on when this is switched, the game turns off.
+    Power up the game. The game is only playable if the power is on. This is to mimic the battery-powered game from the '70s and '80s. If power is on when this is switched, the game turns off.
 
 2. Strict switch
 
@@ -30,7 +32,37 @@ For more information about the game, please visit the official game's [Wikipedia
 
     Display the current level being played.
 
-## Thecnologies
+## Technologies
 
 The game is entirely developed in HTML 5, CSS 3 and Javascript ES6, with no assistance of JS libraries such as JQuery or styling libraries like Bootstrap.
 
+## Styling
+
+It makes use of CSS Flexbox to align items and make the page responsive.
+
+### Switch buttons
+
+The Power Switch and Strict Switch are designed by [Andreas Storm](https://codepen.io/andreasstorm) and the source code can be found [here](https://codepen.io/andreasstorm/pen/rKboqY)
+
+## Tests
+
+The game responsiveness and playability was tested on:
+
+* Firefox for Mac;
+* Chrome for Mac and iOS;
+* Safari for Mac and iOS;
+* Brave for iOS.
+
+The HTML was validated by [W3C Markup Validation Service](https://validator.w3.org/)
+
+CSS was validated by [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator)
+
+JSS was validated by ESLint.
+
+## Issues
+
+* The audio files are only cached when they are first played, causing delays and on audio output. After some research and tests, I wasn't able to find a solution that would fix the problem.
+
+## Deployment
+
+The project was pushed to Github and hosted on [Github Pages](https://pages.github.com/)
