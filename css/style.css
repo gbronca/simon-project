@@ -237,4 +237,14 @@ body {
         padding-top: 5px;
         margin-bottom: -60px;
     }
+
+    .game-counter {
+        background: #330000;
+        color: rgb(255, 0, 0);
+        font-family: courier;
+        font-size: 7.5vmin;
+        height: 8.5vmin;
+        width: 10vmin;
+        text-align: center;
+    }
 }
