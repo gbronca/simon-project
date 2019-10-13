@@ -8,11 +8,9 @@
 
 body {
     font-family: 'Righteous';
-    background-color: antiquewhite;
+    background-color: #faebd7;
     height: 100%;
-    max-width: 1200px;
     margin: auto;
-
 }
 
 /* Header */
@@ -22,21 +20,19 @@ body {
     display: flex;
     justify-content: space-around;
     margin: auto;
-
-
+    min-height: 30px;
+    padding-top: 10px;
+    align-items: center;
 }
 
-#game-title {
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 30px;
-    margin-bottom: -20px;
-    width: 100vw;
-    max-width: 940px;
+.controllers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.title {
-    font-size: 2.8rem;
+.game-controler-legend {
+    padding: 0 10px;
 }
 
 #start {
@@ -56,17 +52,27 @@ body {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-/* Game Board */
+/* Game Board */ 
+
 #board-game {
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     position: relative;
-    height: calc(90vh - 60px);
-    width: 100vw;
     max-width: 940px;
-    margin: auto;
+    margin: 25px auto 60px;
+    flex-flow: row wrap;
+}
+
+#game-title {
+    margin: 10px auto 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 2.8rem;
 }
 
 #simon-game,
@@ -80,6 +86,7 @@ body {
 #simon-game {
     height: 70vh;
     width: 70vh;
+    flex: 1 wrap;
 }
 
 #colors {
@@ -174,6 +181,7 @@ body {
 }
 
 #footer {
+
     display: flex;
     justify-content: center;
     align-items: center;
