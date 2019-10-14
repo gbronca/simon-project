@@ -213,13 +213,8 @@ body {
         width: 80vw;
     }
 
-    .game-title {
-        padding-top: 5px;
-        margin-bottom: -60px;
-    }
-
     .title {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #footer {
@@ -239,11 +234,6 @@ body {
     #simon-game {
         height: 90vw;
         width: 90vw;
-    }
-
-    .game-title {
-        padding-top: 5px;
-        margin-bottom: -60px;
     }
 
     .game-counter {
