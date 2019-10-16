@@ -35,14 +35,12 @@ body {
     padding: 0 10px;
 }
 
-#start {
+.btn {
     margin-top: .25rem;
     margin-bottom: .25rem;
     color: #fff;
     font-size: 1rem;
     line-height: 1.5;
-    background-color: #28a745;
-    border-color: #28a745;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -50,6 +48,16 @@ body {
     padding: .375rem .75rem;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-on {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-off {
+    background-color: #6c757d;
+    border-color: #6c757d;
 }
 
 /* Game Board */ 
@@ -60,7 +68,6 @@ body {
     align-content: center;
     align-items: center;
     position: relative;
-    max-width: 940px;
     margin: 25px auto 60px;
     flex-flow: row wrap;
 }
@@ -72,7 +79,7 @@ body {
 }
 
 .title {
-    font-size: 2.8rem;
+    font-size: 2rem;
 }
 
 #simon-game,
@@ -84,8 +91,8 @@ body {
 }
 
 #simon-game {
-    height: 70vh;
-    width: 70vh;
+    height: 90vw;
+    width: 90vw;
     flex: 1 wrap;
 }
 
@@ -170,10 +177,11 @@ body {
     background: #330000;
     color: rgb(255, 0, 0);
     font-family: courier;
-    font-size: 6vmin;
-    height: 6.5vmin;
-    width: 8vmin;
+    font-size: 7.5vmin;
+    height: 8.5vmin;
+    width: 10vmin;
     text-align: center;
+    padding-top: 2px;
 }
 
 .game-counter-legend {
@@ -186,7 +194,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
-    height: 60px;
+    height: 40px;
     background-color: #141429;
 }
 
@@ -196,53 +204,64 @@ body {
 
 .social-icons > a {
     color: #f9ebd7;
-    font-size: 2rem;
+    font-size: 1rem;
     margin: 15px;
 }
 
 .copywright {
     font-family: Arial, Helvetica, sans-serif;
     color: #f9ebd7;
-    font-size: 1rem;
+    font-size: .5rem;
 }
 
 /* Media queries */
-@media screen and (max-width: 568px) {
+@media screen and (min-width: 568px) {
     #simon-game {
         height: 80vw;
         width: 80vw;
     }
 
+    .game-counter {
+        padding-top: 5px;
+    }
+
     .title {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
     #footer {
-        max-height: 40px;
+        max-height: 60px;
     }
 
     .social-icons > a {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .copywright {
-        font-size: .5rem;
+        font-size: 1rem;
     }
 }
 
-@media screen and (max-width: 820px) {
-    #simon-game {
-        height: 90vw;
-        width: 90vw;
-    }
+@media screen and (min-width: 821px) {
 
     .game-counter {
         background: #330000;
         color: rgb(255, 0, 0);
         font-family: courier;
-        font-size: 7.5vmin;
-        height: 8.5vmin;
-        width: 10vmin;
+        font-size: 7vmin;
+        height: 9vmin;
+        width: 11vmin;
         text-align: center;
+    }
+
+    #board-game {
+        max-width: 940px;
+    }
+
+    #simon-game {
+        height: 70vw;
+        width: 70vw;
+        max-width: 750px;
+        max-height: 750px;
     }
 }

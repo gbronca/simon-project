@@ -8,8 +8,6 @@ let count;
 let timerVariable;
 let player = true; // True: Computer, False: Human
 
-
-
 const counter = document.querySelector('.game-counter');
 const strictButton = document.querySelector('#strict');
 const powerButton = document.querySelector('#power');
@@ -100,10 +98,14 @@ powerButton.addEventListener('click', () => {
 	if (powerButton.checked) {
 		power = true;
 		counter.innerHTML = '-';
+		startButton.classList.remove('btn-off');
+		startButton.classList.add('btn-on');
 	} else {
 		power = false;
 		startButton.innerHTML = 'Start';
 		counter.innerHTML = '';
+		startButton.classList.remove('btn-on');
+		startButton.classList.add('btn-off');
 		clearInterval(timerVariable);
 	}
 });
