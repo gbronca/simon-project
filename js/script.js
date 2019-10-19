@@ -151,7 +151,8 @@ function check() {
 function played(color) {
 	if (power) {
 	// finds the colour clicked by the player and adds
-	// to the playerSequence array the color position in the colors array.
+	// to the playerSequence array the color position in the colors array,
+	// only if it is the player's turn.
 		const playedColor = color.srcElement.attributes.id.value;
 		playerSequence.push(colors.indexOf(playedColor));
   

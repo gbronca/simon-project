@@ -59,6 +59,10 @@ CSS was validated by [The W3C CSS Validation Service](https://jigsaw.w3.org/css-
 
 JSS was validated by ESLint.
 
+## Challenges
+
+One of the main challenges in the project was to align the gameboard keeping its round format and at the same time being responsive to the user screen size.
+
 ## Issues
 
 * The audio files are only cached when they are first played, causing delays and on audio output. After some research and tests, I wasn't able to find a solution that would fix the problem.
